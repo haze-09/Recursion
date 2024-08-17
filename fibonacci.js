@@ -26,9 +26,7 @@ function fibs(n) {
   return sequence;
 }
 
-
 function fibsRec(n) {
-
   if (n <= 0) {
     return "Enter a positive number";
   } else if (n === 1) {
@@ -36,8 +34,10 @@ function fibsRec(n) {
   } else if (n === 2) {
     return [0, 1];
   } else {
-    let sequence = fibsRec(n-1);
-    sequence.push(sequence[sequence.length - 1] + sequence[sequence.length - 2]);
+    let sequence = fibsRec(n - 1);
+    sequence.push(
+      sequence[sequence.length - 1] + sequence[sequence.length - 2]
+    );
     return sequence;
   }
 }
